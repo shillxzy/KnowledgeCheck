@@ -11,9 +11,10 @@ namespace KnowledgeCheck.DAL.Repositories.Interfaces
     {
         Task<IEnumerable<Test>> GetAllTestsAsync();
         Task<Test?> GetTestByIdAsync(int id);
-        Task AddTestAsync(Test test);
-        void UpdateTest(Test test);
-        void DeleteTest(Test test);
+        Task AddAsync(Test test);
+        void Update(Test test);
+        void Delete(Test test);
         Task<bool> SaveChangesAsync();
+
     }
 }

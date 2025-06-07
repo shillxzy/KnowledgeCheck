@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KnowledgeCheck.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83edbca72ee405277ed68523bbc8729f562fccc5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c58521092674161b0854c2814430a565e3973a78")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnowledgeCheck.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnowledgeCheck.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

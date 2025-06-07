@@ -69,5 +69,6 @@ namespace KnowledgeCheck.DAL.Repositories
         {
             throw new NotImplementedException();
         }
+
     }
 }
