@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeCheck.API", "KnowledgeCheck.API\KnowledgeCheck.API.csproj", "{B002841A-F4C0-4DB4-8CB8-AB58732B2C3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeCheck.BLL", "KnowledgeCheck.BLL\KnowledgeCheck.BLL.csproj", "{D36BABE9-E81E-4497-AC48-2748DAD18CAA}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B002841A-F4C0-4DB4-8CB8-AB58732B2C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B002841A-F4C0-4DB4-8CB8-AB58732B2C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B002841A-F4C0-4DB4-8CB8-AB58732B2C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B002841A-F4C0-4DB4-8CB8-AB58732B2C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D36BABE9-E81E-4497-AC48-2748DAD18CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36BABE9-E81E-4497-AC48-2748DAD18CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36BABE9-E81E-4497-AC48-2748DAD18CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36BABE9-E81E-4497-AC48-2748DAD18CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

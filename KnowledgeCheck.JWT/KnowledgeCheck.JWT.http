@@ -1,0 +1,6 @@
+@KnowledgeCheck.JWT_HostAddress = http://localhost:5070
+
+GET {{KnowledgeCheck.JWT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
