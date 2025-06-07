@@ -9,10 +9,10 @@ This solution is designed to support user authentication, question management, t
 
 The project follows a 4-layer architecture for separation of concerns:
 
-KnowledgeCheck.API → REST API endpoints
-KnowledgeCheck.BLL → Business logic (DTOs, Services, Validation)
-KnowledgeCheck.DAL → Data access (Models, DbContext, Repositories)
-KnowledgeCheck.JWT → Authentication (JWT, ASP.NET Identity)
+- **KnowledgeCheck.API** → REST API endpoints
+- **KnowledgeCheck.BLL** → Business logic (DTOs, Services, Validation)
+- **KnowledgeCheck.DAL** → Data access (Models, DbContext, Repositories)
+- **KnowledgeCheck.JWT** → Authentication (JWT, ASP.NET Identity)
 
 Each layer has a clear responsibility and communicates only with adjacent layers to maintain modularity and testability.
 
