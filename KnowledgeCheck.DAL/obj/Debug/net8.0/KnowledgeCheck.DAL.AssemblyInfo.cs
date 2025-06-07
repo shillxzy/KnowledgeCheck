@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KnowledgeCheck.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+475e6328b890b18bb42b50791b368dee8f58b4b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56527769641f5d28a4a52d0bf7fad9e5abcce2b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnowledgeCheck.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnowledgeCheck.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
