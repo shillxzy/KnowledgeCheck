@@ -9,5 +9,6 @@ namespace KnowledgeCheck.BLL.DTOs.Test
     public class TestResponseDto : TestDto
     {
         public List<string> Questions { get; set; } = new();
+        public int QuestionCount { get; set; }
     }
 }

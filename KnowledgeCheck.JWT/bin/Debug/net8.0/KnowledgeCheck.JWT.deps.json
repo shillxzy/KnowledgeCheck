@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "KnowledgeCheck.API/1.0.0": {
+      "KnowledgeCheck.JWT/1.0.0": {
         "dependencies": {
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
-          "KnowledgeCheck.API.dll": {}
+          "KnowledgeCheck.JWT.dll": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
@@ -64,7 +64,7 @@
     }
   },
   "libraries": {
-    "KnowledgeCheck.API/1.0.0": {
+    "KnowledgeCheck.JWT/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

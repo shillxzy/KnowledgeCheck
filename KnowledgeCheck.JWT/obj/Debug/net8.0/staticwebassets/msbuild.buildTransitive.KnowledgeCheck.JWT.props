@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\KnowledgeCheck.JWT.props" />
+</Project>

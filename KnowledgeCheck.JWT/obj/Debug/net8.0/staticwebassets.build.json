@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "iFmiN1sRqKXs0uRCNg6uzhPr/T3jfJI2YkDeQhw3XAg=",
-  "Source": "KnowledgeCheck.API",
-  "BasePath": "_content/KnowledgeCheck.API",
+  "Hash": "48iGasuS8Kbs8qmIkDtu2GrNnCRu7Fbq5qgO4F40mms=",
+  "Source": "KnowledgeCheck.JWT",
+  "BasePath": "_content/KnowledgeCheck.JWT",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
