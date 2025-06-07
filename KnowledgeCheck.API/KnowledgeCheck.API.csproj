@@ -11,12 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\KnowledgeCheck.BLL\KnowledgeCheck.BLL.csproj" />
+    <ProjectReference Include="..\KnowledgeCheck.JWT\KnowledgeCheck.JWT.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KnowledgeCheck.BLL\KnowledgeCheck.BLL.csproj" />
-    <ProjectReference Include="..\KnowledgeCheck.JWT\KnowledgeCheck.JWT.csproj" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
