@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KnowledgeCheck.DAL\KnowledgeCheck.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeCheck.API", "Knowl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeCheck.BLL", "KnowledgeCheck.BLL\KnowledgeCheck.BLL.csproj", "{D36BABE9-E81E-4497-AC48-2748DAD18CAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeCheck.DAL", "KnowledgeCheck.DAL\KnowledgeCheck.DAL.csproj", "{A877562E-536B-4087-9320-50C39A7E0FBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeCheck.JWT", "KnowledgeCheck.JWT\KnowledgeCheck.JWT.csproj", "{36743CBB-DE59-49CF-A97E-5DB4F9391A7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D36BABE9-E81E-4497-AC48-2748DAD18CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D36BABE9-E81E-4497-AC48-2748DAD18CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D36BABE9-E81E-4497-AC48-2748DAD18CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A877562E-536B-4087-9320-50C39A7E0FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A877562E-536B-4087-9320-50C39A7E0FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A877562E-536B-4087-9320-50C39A7E0FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A877562E-536B-4087-9320-50C39A7E0FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36743CBB-DE59-49CF-A97E-5DB4F9391A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36743CBB-DE59-49CF-A97E-5DB4F9391A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36743CBB-DE59-49CF-A97E-5DB4F9391A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36743CBB-DE59-49CF-A97E-5DB4F9391A7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

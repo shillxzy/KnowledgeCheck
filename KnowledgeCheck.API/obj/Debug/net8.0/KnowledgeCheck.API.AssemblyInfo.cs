@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KnowledgeCheck.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41d4c8f9b16b734003e924612c063b4dfa83c7f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c4e5e85e70d3d0ee104ddcce03c639c864437d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnowledgeCheck.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnowledgeCheck.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
