@@ -10,7 +10,7 @@ namespace KnowledgeCheck.DAL.Entities.Configuration
         {
             builder.HasKey(u => u.Id);
 
-            builder.Property(u => u.Username)
+            builder.Property(u => u.UserName)
                 .IsRequired()
                 .HasMaxLength(50);
 
@@ -22,7 +22,7 @@ namespace KnowledgeCheck.DAL.Entities.Configuration
                 .IsRequired();
 
             builder.Property(u => u.Role)
-                .HasDefaultValue("user");
+                .HasDefaultValue("User");
 
             builder.Property(u => u.CreatedAt)
                 .HasDefaultValueSql("NOW()");
