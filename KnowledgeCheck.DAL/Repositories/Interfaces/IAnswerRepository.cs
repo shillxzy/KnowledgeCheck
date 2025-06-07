@@ -14,5 +14,6 @@ namespace KnowledgeCheck.DAL.Repositories.Interfaces
         void Update(Answer answer);
         void Delete(Answer answer);
         Task SaveChangesAsync();
+        Task<IEnumerable<Answer>> GetByQuestionIdAsync(int questionId);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using KnowledgeCheck.DAL.Data;
 using KnowledgeCheck.DAL.Entities;
 using KnowledgeCheck.DAL.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,13 @@ namespace KnowledgeCheck.DAL.Repositories
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Answer>> GetByQuestionIdAsync(int questionId)
+        {
+            return await _context.Answers
+                .Where(a => a.QuestionId == questionId)
+                .ToListAsync();
         }
     }
 }
