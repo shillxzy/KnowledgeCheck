@@ -22,8 +22,4 @@
     <ProjectReference Include="..\KnowledgeCheck.DAL\KnowledgeCheck.DAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
