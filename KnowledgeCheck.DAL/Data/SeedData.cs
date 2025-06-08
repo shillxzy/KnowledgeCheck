@@ -14,7 +14,7 @@ namespace KnowledgeCheck.DAL
         public static async Task SeedAsync(
             KnowledgeCheckDbContext context,
             UserManager<User> userManager,
-            RoleManager<IdentityRole<int>> roleManager)
+            RoleManager<IdentityRole> roleManager)
         {
             await context.Database.MigrateAsync();
 
@@ -22,7 +22,7 @@ namespace KnowledgeCheck.DAL
             foreach (var role in roles)
             {
                 if (!await roleManager.RoleExistsAsync(role))
-                    await roleManager.CreateAsync(new IdentityRole<int>(role));
+                    await roleManager.CreateAsync(new IdentityRole(role));
             }
 
             if (!context.Users.Any())

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace KnowledgeCheck.BLL.Exceptions
 {
-    public class ValidationException : Exception
+    public class NotFoundException : Exception
     {
-        public ValidationException(string message = "Validation failed.") : base(message) { }
+        public NotFoundException(string message) : base(message)
+        {
+        }
     }
 }
