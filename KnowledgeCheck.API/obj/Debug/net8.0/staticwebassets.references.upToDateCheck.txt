@@ -1,0 +1,2 @@
+C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.JWT\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.JWT\obj\Debug\net8.0\staticwebassets.build.json

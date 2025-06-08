@@ -1,21 +1,21 @@
 using System.Net;
 using System.Net.Mail;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.OpenApi.Models;
-using KnowledgeCheck.BLL;
 using KnowledgeCheck.BLL.Configuration;
-using KnowledgeCheck.DAL;
+using KnowledgeCheck.BLL;
 using KnowledgeCheck.JWT.Configuration;
 using KnowledgeCheck.JWT.Middlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.OpenApi.Models;
+using KnowledgeCheck.DAL;
+
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
-// SMTP config
 var smtpSettings = configuration.GetSection("Smtp");
 var smtpClient = new SmtpClient(smtpSettings["Host"])
 {
-    Port = int.Parse(smtpSettings["Port"] ?? "587"),
+    Port = int.Parse(smtpSettings["Port"] ?? string.Empty),
     Credentials = new NetworkCredential(smtpSettings["User"], smtpSettings["Pass"]),
     EnableSsl = true
 };
@@ -24,19 +24,18 @@ builder.Services
     .AddFluentEmail(smtpSettings["Sender"])
     .AddSmtpSender(smtpClient);
 
-// Custom services
 builder.Services.AddDALServices(configuration);
 builder.Services.AddBusinessLogic();
+
 builder.Services.AddMapsterConfiguration();
 
-// JWT
+// Add services to the container.
 builder.Services.AddJwtAuthentication(configuration);
+
 builder.Services.AddAuthorization();
 
-// Controllers
 builder.Services.AddControllers();
-
-// Swagger + JWT
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -63,7 +62,7 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
-// Dev-specific middleware
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -71,6 +70,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
 
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 

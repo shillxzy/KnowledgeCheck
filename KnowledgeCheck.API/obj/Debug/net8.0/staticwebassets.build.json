@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "iFmiN1sRqKXs0uRCNg6uzhPr/T3jfJI2YkDeQhw3XAg=",
+  "Source": "KnowledgeCheck.API",
+  "BasePath": "_content/KnowledgeCheck.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

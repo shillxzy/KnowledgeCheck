@@ -1,12 +1,12 @@
+C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\bin\Debug\net8.0\KnowledgeCheck.DAL.deps.json
+C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\bin\Debug\net8.0\KnowledgeCheck.DAL.dll
+C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\bin\Debug\net8.0\KnowledgeCheck.DAL.pdb
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.csproj.AssemblyReference.cache
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.AssemblyInfoInputs.cache
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.AssemblyInfo.cs
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.csproj.CoreCompileInputs.cache
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.sourcelink.json
-C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\bin\Debug\net8.0\KnowledgeCheck.DAL.deps.json
-C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\bin\Debug\net8.0\KnowledgeCheck.DAL.dll
-C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\bin\Debug\net8.0\KnowledgeCheck.DAL.pdb
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.dll
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\refint\KnowledgeCheck.DAL.dll
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.pdb
