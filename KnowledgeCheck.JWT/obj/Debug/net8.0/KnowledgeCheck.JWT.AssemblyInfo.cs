@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KnowledgeCheck.JWT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b705dbfc2a5448eddb11505c0732c6d831f75789")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12dcab78a1b853197b063c836a8204fa9b0ccffd")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnowledgeCheck.JWT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnowledgeCheck.JWT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

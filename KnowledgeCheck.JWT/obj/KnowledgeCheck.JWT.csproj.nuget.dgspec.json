@@ -4,14 +4,121 @@
     "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\KnowledgeCheck.JWT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\KnowledgeCheck.JWT.csproj": {
+    "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.BLL\\KnowledgeCheck.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\KnowledgeCheck.JWT.csproj",
-        "projectName": "KnowledgeCheck.JWT",
-        "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\KnowledgeCheck.JWT.csproj",
+        "projectUniqueName": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.BLL\\KnowledgeCheck.BLL.csproj",
+        "projectName": "KnowledgeCheck.BLL",
+        "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.BLL\\KnowledgeCheck.BLL.csproj",
         "packagesPath": "C:\\Users\\dmska\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\obj\\",
+        "outputPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dmska\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj": {
+                "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentEmail.Core": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.1, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "SharpGrip.FluentValidation.AutoValidation.Mvc": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj",
+        "projectName": "KnowledgeCheck.DAL",
+        "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj",
+        "packagesPath": "C:\\Users\\dmska\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +157,132 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[35.6.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\KnowledgeCheck.JWT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\KnowledgeCheck.JWT.csproj",
+        "projectName": "KnowledgeCheck.JWT",
+        "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\KnowledgeCheck.JWT.csproj",
+        "packagesPath": "C:\\Users\\dmska\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.JWT\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dmska\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.BLL\\KnowledgeCheck.BLL.csproj": {
+                "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.BLL\\KnowledgeCheck.BLL.csproj"
+              },
+              "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj": {
+                "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentEmail.Core": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"

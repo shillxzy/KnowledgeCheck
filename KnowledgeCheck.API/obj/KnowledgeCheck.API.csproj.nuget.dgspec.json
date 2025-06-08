@@ -336,7 +336,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.BLL\\KnowledgeCheck.BLL.csproj": {
+                "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.BLL\\KnowledgeCheck.BLL.csproj"
+              },
+              "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj": {
+                "projectPath": "C:\\Users\\dmska\\source\\repos\\KnowledgeCheck\\KnowledgeCheck.DAL\\KnowledgeCheck.DAL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -355,6 +362,34 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentEmail.Core": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
