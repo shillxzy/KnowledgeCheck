@@ -9,6 +9,7 @@ namespace KnowledgeCheck.BLL.Services.Interfaces
 {
     public interface IUserService
     {
+        Task<IEnumerable<UserResponseDto>> GetAllAsync(CancellationToken cancellationToken = default);
         Task<UserResponseDto> GetByIdAsync(int id);
         Task<UserResponseDto> GetByUsernameAsync(string username);
         Task<UserResponseDto> CreateUserAsync(UserCreateDto dto);

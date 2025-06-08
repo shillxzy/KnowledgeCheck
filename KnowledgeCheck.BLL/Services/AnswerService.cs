@@ -1,19 +1,28 @@
 ﻿using KnowledgeCheck.BLL.DTOs.Answer;
+using KnowledgeCheck.BLL.DTOs.User;
 using KnowledgeCheck.BLL.Exceptions;
 using KnowledgeCheck.BLL.Services.Interfaces;
 using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Repositories;
 using KnowledgeCheck.DAL.Repositories.Interfaces;
 using Mapster;
+using MapsterMapper;
 
 namespace KnowledgeCheck.BLL.Services
 {
     public class AnswerService : IAnswerService
     {
         private readonly IAnswerRepository _answerRepository;
+        private readonly IMapper _mapper;
 
         public AnswerService(IAnswerRepository answerRepository)
         {
             _answerRepository = answerRepository;
+        }
+        public async Task<IEnumerable<AnswerResponseDto>> GetAllAsync()
+        {
+            var answers = await _answerRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<AnswerResponseDto>>(answers);
         }
 
         public async Task<AnswerResponseDto> GetByIdAsync(int id)

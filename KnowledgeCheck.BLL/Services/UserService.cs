@@ -16,6 +16,12 @@ namespace KnowledgeCheck.BLL.Services
             _userRepository = userRepository;
         }
 
+        public async Task<IEnumerable<UserResponseDto>> GetAllAsync(CancellationToken cancellationToken = default)
+        {
+            var users = await _userRepository.GetAllAsync(cancellationToken);
+            return users.Adapt<IEnumerable<UserResponseDto>>();
+        }
+
         public async Task<UserResponseDto> GetByIdAsync(int id)
         {
             var user = await _userRepository.GetByIdAsync(id)

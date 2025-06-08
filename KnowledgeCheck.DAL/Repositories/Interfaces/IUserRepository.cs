@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KnowledgeCheck.DAL.Repositories.Interfaces
 {
-    public interface IUserRepository
+    public interface IUserRepository : IGenericRepository<User>
     {
         Task<User?> GetByIdAsync(int id);
         Task<User?> GetByUsernameAsync(string username);

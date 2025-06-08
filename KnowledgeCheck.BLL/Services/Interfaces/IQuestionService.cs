@@ -14,5 +14,7 @@ namespace KnowledgeCheck.BLL.Services.Interfaces
         Task<QuestionResponseDto> CreateQuestionAsync(QuestionCreateDto dto);
         Task UpdateQuestionAsync(int id, QuestionUpdateDto dto);
         Task DeleteQuestionAsync(int id);
+        Task<IEnumerable<QuestionResponseDto>> GetAllAsync();
+
     }
 }

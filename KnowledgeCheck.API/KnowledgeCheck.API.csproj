@@ -15,8 +15,4 @@
     <ProjectReference Include="..\KnowledgeCheck.JWT\KnowledgeCheck.JWT.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

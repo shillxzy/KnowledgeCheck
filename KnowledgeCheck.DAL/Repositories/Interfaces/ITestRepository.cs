@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KnowledgeCheck.DAL.Repositories.Interfaces
 {
-    public interface ITestRepository
+    public interface ITestRepository : IGenericRepository<Test>
     {
         Task<IEnumerable<Test>> GetAllTestsAsync();
         Task<Test?> GetTestByIdAsync(int id);

@@ -1,21 +1,30 @@
-﻿using KnowledgeCheck.BLL.DTOs.Result;
+﻿using KnowledgeCheck.BLL.DTOs.Question;
+using KnowledgeCheck.BLL.DTOs.Result;
 using KnowledgeCheck.BLL.Exceptions;
 using KnowledgeCheck.BLL.Services.Interfaces;
 using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Repositories;
 using KnowledgeCheck.DAL.Repositories.Interfaces;
 using Mapster;
+using MapsterMapper;
 
 namespace KnowledgeCheck.BLL.Services
 {
     public class ResultService : IResultService
     {
         private readonly IResultRepository _resultRepository;
+        private readonly IMapper _mapper;
 
         public ResultService(IResultRepository resultRepository)
         {
             _resultRepository = resultRepository;
         }
 
+        public async Task<IEnumerable<ResultResponseDto>> GetAllAsync()
+        {
+            var answers = await _resultRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<ResultResponseDto>>(answers);
+        }
         public async Task<ResultResponseDto> GetByIdAsync(int id)
         {
             var result = await _resultRepository.GetByIdAsync(id) ?? throw new ResultNotFoundException();
