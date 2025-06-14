@@ -134,10 +134,10 @@ C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\s
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.KnowledgeCheck.API.props
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.KnowledgeCheck.API.props
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\Knowledg.1296D6D6.Up2Date
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\KnowledgeCheck.API.dll
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\refint\KnowledgeCheck.API.dll
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\KnowledgeCheck.API.pdb
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\KnowledgeCheck.API.genruntimeconfig.cache
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\ref\KnowledgeCheck.API.dll
+C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

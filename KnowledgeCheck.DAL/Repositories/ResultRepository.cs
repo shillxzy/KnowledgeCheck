@@ -39,7 +39,7 @@ namespace KnowledgeCheck.DAL.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Result>> GetByUserIdAsync(int userId)
+        public async Task<IEnumerable<Result>> GetByUserIdAsync(string userId)
         {
             return await _context.Results
                 .Where(r => r.UserId == userId)

@@ -31,7 +31,7 @@ namespace KnowledgeCheck.BLL.Services
             return result.Adapt<ResultResponseDto>();
         }
 
-        public async Task<IEnumerable<ResultResponseDto>> GetByUserIdAsync(int userId)
+        public async Task<IEnumerable<ResultResponseDto>> GetByUserIdAsync(string userId)
         {
             var results = await _resultRepository.GetByUserIdAsync(userId);
             return results.Adapt<IEnumerable<ResultResponseDto>>();

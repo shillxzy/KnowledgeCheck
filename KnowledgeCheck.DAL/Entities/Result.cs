@@ -9,7 +9,7 @@ namespace KnowledgeCheck.DAL.Entities
     public class Result
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public int TestId { get; set; }
         public int Score { get; set; }
         public DateTime TakenAt { get; set; }

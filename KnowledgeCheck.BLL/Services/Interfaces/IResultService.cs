@@ -11,7 +11,7 @@ namespace KnowledgeCheck.BLL.Services.Interfaces
     public interface IResultService
     {
         Task<ResultResponseDto> GetByIdAsync(int id);
-        Task<IEnumerable<ResultResponseDto>> GetByUserIdAsync(int userId);
+        Task<IEnumerable<ResultResponseDto>> GetByUserIdAsync(string userId);
         Task<ResultResponseDto> CreateResultAsync(ResultCreateDto dto);
         Task UpdateResultAsync(int id, ResultUpdateDto dto);
         Task DeleteResultAsync(int id);

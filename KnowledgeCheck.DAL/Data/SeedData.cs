@@ -30,8 +30,7 @@ namespace KnowledgeCheck.DAL
                 var usersFaker = new Faker<User>()
                     .RuleFor(u => u.UserName, f => f.Internet.UserName())
                     .RuleFor(u => u.Email, f => f.Internet.Email())
-                    .RuleFor(u => u.CreatedAt, f => f.Date.Past(1));
-
+                    .RuleFor(u => u.CreatedAt, f => f.Date.Past(1).ToUniversalTime());
                 var users = usersFaker.Generate(10);
 
                 const string simplePassword = "1234567890";

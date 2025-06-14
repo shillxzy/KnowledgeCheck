@@ -101,6 +101,21 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<KnowledgeCheckDbContext>();
+    try
+    {
+        if (await context.Database.CanConnectAsync())
+        {
+            Console.WriteLine("Успішно підключено до бази даних");
+        }
+        else
+        {
+            Console.WriteLine("Не вдалось підключитись до бази даних");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Помилка підключення: " + ex.Message);
+    }
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     await SeedData.SeedAsync(context, userManager, roleManager);

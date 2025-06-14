@@ -15,6 +15,6 @@ namespace KnowledgeCheck.DAL.Repositories.Interfaces
         void Delete(Result result);
         Task SaveChangesAsync();
 
-        Task<IEnumerable<Result>> GetByUserIdAsync(int userId);
+        Task<IEnumerable<Result>> GetByUserIdAsync(string userId);
     }
 }

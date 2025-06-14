@@ -11,3 +11,5 @@ C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\K
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\refint\KnowledgeCheck.DAL.dll
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.pdb
 C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\ref\KnowledgeCheck.DAL.dll
+C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\bin\Debug\net8.0\KnowledgeCheck.DAL.runtimeconfig.json
+C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\obj\Debug\net8.0\KnowledgeCheck.DAL.genruntimeconfig.cache

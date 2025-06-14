@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using KnowledgeCheck.DAL.Entities;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace KnowledgeCheck.DAL.Data
 {
@@ -20,6 +21,21 @@ namespace KnowledgeCheck.DAL.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(KnowledgeCheckDbContext).Assembly);
+
+            var dateTimeConverter = new ValueConverter<DateTime, DateTime>(
+                v => v.ToUniversalTime(),
+                v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                var properties = entityType.GetProperties()
+                    .Where(p => p.ClrType == typeof(DateTime));
+
+                foreach (var property in properties)
+                {
+                    property.SetValueConverter(dateTimeConverter);
+                }
+            }
         }
     }
 }
