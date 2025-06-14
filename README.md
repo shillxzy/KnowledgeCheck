@@ -42,7 +42,4 @@ Each layer has a clear responsibility and communicates only with adjacent layers
 | Tests         | Assign questions into tests, define timing and structure                    |
 | Results       | Submit answers, calculate score, show feedback                             |
 
----
-
-## 🧱 Folder Structure
 
