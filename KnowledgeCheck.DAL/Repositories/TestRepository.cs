@@ -1,5 +1,7 @@
 ﻿using KnowledgeCheck.DAL.Data;
 using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Entities.HelpModels;
+using KnowledgeCheck.DAL.Helpers;
 using KnowledgeCheck.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
@@ -68,6 +70,29 @@ namespace KnowledgeCheck.DAL.Repositories
         Task<bool> ITestRepository.SaveChangesAsync()
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<PagedList<Test>> GetAllPaginatedAsync(TestParameters parameters, ISortHelper<Test> sortHelper, CancellationToken cancellationToken = default)
+        {
+            var query = _dbSet.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(parameters.Title))
+                query = query.Where(t => t.Title.ToLower().Contains(parameters.Title.ToLower()));
+
+            if (parameters.CreatedFrom is not null)
+                query = query.Where(t => t.CreatedAt >= parameters.CreatedFrom);
+
+            if (parameters.CreatedTo is not null)
+                query = query.Where(t => t.CreatedAt <= parameters.CreatedTo);
+
+            query = sortHelper.ApplySort(query, parameters.OrderBy);
+
+            return await PagedList<Test>.ToPagedListAsync(
+                query.AsNoTracking(),
+                parameters.PageNumber,
+                parameters.PageSize,
+                cancellationToken
+            );
         }
 
     }

@@ -21,9 +21,9 @@ namespace KnowledgeCheck.JWT.Configuration
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequiredLength = 6;
             })
-                .AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<KnowledgeCheckDbContext>()
-                .AddDefaultTokenProviders();
+             .AddRoles<IdentityRole>()
+             .AddEntityFrameworkStores<KnowledgeCheckDbContext>()
+             .AddDefaultTokenProviders();
 
             services.AddAuthentication(options =>
             {

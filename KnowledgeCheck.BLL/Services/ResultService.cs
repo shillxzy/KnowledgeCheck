@@ -3,6 +3,8 @@ using KnowledgeCheck.BLL.DTOs.Result;
 using KnowledgeCheck.BLL.Exceptions;
 using KnowledgeCheck.BLL.Services.Interfaces;
 using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Entities.HelpModels;
+using KnowledgeCheck.DAL.Helpers;
 using KnowledgeCheck.DAL.Repositories;
 using KnowledgeCheck.DAL.Repositories.Interfaces;
 using Mapster;
@@ -14,11 +16,40 @@ namespace KnowledgeCheck.BLL.Services
     {
         private readonly IResultRepository _resultRepository;
         private readonly IMapper _mapper;
+        private readonly ISortHelper<Result> _resultSortHelper;
 
-        public ResultService(IResultRepository resultRepository)
+        public ResultService(IResultRepository resultRepository, IMapper mapper, ISortHelper<Result> resultSortHelper)
         {
             _resultRepository = resultRepository;
+            _mapper = mapper;
+            _resultSortHelper = resultSortHelper;
         }
+
+        public async Task<PagedList<ResultResponseDto>> GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken)
+        {
+            var pagedResults = await _resultRepository.GetAllPaginatedAsync(
+                parameters,
+                new SortHelper<Result>(),  
+                cancellationToken);
+
+            var mapped = pagedResults.Select(r => new ResultResponseDto
+            {
+                Id = r.Id,
+                UserId = r.UserId,
+                TestId = r.TestId,
+                Score = r.Score,
+                TakenAt = r.TakenAt,
+                UserName = r.User?.UserName ?? string.Empty,
+                TestName = r.Test?.Title ?? string.Empty
+            }).ToList();
+
+            return new PagedList<ResultResponseDto>(
+                mapped,
+                pagedResults.TotalCount,
+                pagedResults.CurrentPage,
+                pagedResults.PageSize);
+        }
+
 
         public async Task<IEnumerable<ResultResponseDto>> GetAllAsync()
         {

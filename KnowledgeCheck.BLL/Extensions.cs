@@ -13,6 +13,7 @@ using KnowledgeCheck.BLL.Validators.Test;
 using KnowledgeCheck.BLL.Validators.User;
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation.AspNetCore;
+using MapsterMapper;
 
 namespace KnowledgeCheck.BLL
 {
@@ -25,6 +26,7 @@ namespace KnowledgeCheck.BLL
             services.AddScoped<IQuestionService, QuestionService>();
             services.AddScoped<IAnswerService, AnswerService>();
             services.AddScoped<IResultService, ResultService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             services.AddFluentValidationAutoValidation();
 

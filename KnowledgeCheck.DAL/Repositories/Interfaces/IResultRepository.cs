@@ -1,4 +1,6 @@
 ﻿using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Entities.HelpModels;
+using KnowledgeCheck.DAL.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,8 @@ namespace KnowledgeCheck.DAL.Repositories.Interfaces
         void Update(Result result);
         void Delete(Result result);
         Task SaveChangesAsync();
-
         Task<IEnumerable<Result>> GetByUserIdAsync(string userId);
+        Task<PagedList<Result>> GetAllPaginatedAsync(ResultParameters parameters, ISortHelper<Result> sortHelper, CancellationToken cancellationToken = default);
+        
     }
 }

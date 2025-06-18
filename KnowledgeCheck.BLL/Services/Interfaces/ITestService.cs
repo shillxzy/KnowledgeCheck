@@ -1,4 +1,7 @@
 ﻿using KnowledgeCheck.BLL.DTOs.Test;
+using KnowledgeCheck.DAL.Entities.HelpModels;
+using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +17,7 @@ namespace KnowledgeCheck.BLL.Services.Interfaces
         Task<TestResponseDto> CreateTestAsync(TestCreateDto dto);
         Task UpdateTestAsync(int id, TestUpdateDto dto);
         Task DeleteTestAsync(int id);
+
+        Task<PagedList<Test>> GetPaginatedAsync(TestParameters parameters, CancellationToken cancellationToken);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using KnowledgeCheck.BLL.DTOs.User;
+using KnowledgeCheck.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,7 @@ namespace KnowledgeCheck.BLL.Services.Interfaces
         Task<UserResponseDto> CreateUserAsync(UserCreateDto dto);
         Task UpdateUserAsync(int id, UserUpdateDto dto);
         Task DeleteUserAsync(int id);
+        Task<IEnumerable<UserResponseDto>> GetFilteredAsync(UserFilterDto filter);
+
     }
 }

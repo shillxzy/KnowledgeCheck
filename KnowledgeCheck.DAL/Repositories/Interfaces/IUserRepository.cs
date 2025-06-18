@@ -15,5 +15,7 @@ namespace KnowledgeCheck.DAL.Repositories.Interfaces
         void Update(User user);
         void Delete(User user);
         Task SaveChangesAsync();
+        IQueryable<User> GetAllQueryable();
+
     }
 }

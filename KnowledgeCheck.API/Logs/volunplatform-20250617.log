@@ -1,0 +1,2005 @@
+[15:31:31 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:31:31 INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:31:31 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:31:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:31:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:31:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:31:31 INF] No migrations were applied. The database is already up to date.
+[15:31:32 INF] Executed DbCommand (10ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:31:32 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:31:32 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[15:31:32 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[15:31:32 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[15:31:32 INF] Now listening on: https://localhost:7264
+[15:31:32 INF] Now listening on: http://localhost:5247
+[15:31:32 INF] Application started. Press Ctrl+C to shut down.
+[15:31:32 INF] Hosting environment: Development
+[15:31:32 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[15:31:33 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:31:33 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 179.1826ms
+[15:31:33 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:31:33 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 20.9431ms
+[15:31:33 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:31:33 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.9599ms
+[15:31:34 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:31:34 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.1845ms
+[15:31:44 INF] Request starting HTTP/2 GET https://localhost:7264/api/Users - null null
+[15:31:44 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.UsersController.GetAll (KnowledgeCheck.API)'
+[15:31:44 INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller KnowledgeCheck.API.Controllers.UsersController (KnowledgeCheck.API).
+[15:31:45 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+[15:31:45 INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[KnowledgeCheck.DAL.Entities.User, KnowledgeCheck.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[KnowledgeCheck.BLL.DTOs.User.UserResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:31:45 INF] Executed action KnowledgeCheck.API.Controllers.UsersController.GetAll (KnowledgeCheck.API) in 265.3364ms
+[15:31:45 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.UsersController.GetAll (KnowledgeCheck.API)'
+[15:31:45 ERR] Unhandled exception
+System.FormatException: The input string 'ddb086fa-2106-430a-8ec4-fdbc62945f0a' was not in a correct format.
+   at System.Number.ThrowFormatException[TChar](ReadOnlySpan`1 value)
+   at lambda_method66(Closure, User)
+   at System.Linq.Enumerable.SelectListIterator`2.MoveNext()
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[15:31:45 INF] Request finished HTTP/2 GET https://localhost:7264/api/Users - 500 null application/json 489.382ms
+[15:37:59 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?MaxScore=84 - null null
+[15:37:59 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:37:59 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:38:00 INF] Executed DbCommand (2ms) [Parameters=[@__parameters_MaxScore_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Results" AS r
+WHERE r."Score" <= @__parameters_MaxScore_Value_0
+[15:38:00 INF] Executed DbCommand (1ms) [Parameters=[@__parameters_MaxScore_Value_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Score", t."TakenAt", t."TestId", t."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t0."Id", t0."CreatedAt", t0."Description", t0."Title"
+FROM (
+    SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+    FROM "Results" AS r
+    WHERE r."Score" <= @__parameters_MaxScore_Value_0
+    ORDER BY r."Id"
+    LIMIT @__p_2 OFFSET @__p_1
+) AS t
+INNER JOIN "AspNetUsers" AS a ON t."UserId" = a."Id"
+INNER JOIN "Tests" AS t0 ON t."TestId" = t0."Id"
+ORDER BY t."Id"
+[15:38:00 INF] Executing OkObjectResult, writing value of type 'KnowledgeCheck.DAL.Helpers.PagedList`1[[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:38:00 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 880.5104ms
+[15:38:00 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:38:00 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?MaxScore=84 - 200 null application/json; charset=utf-8 908.0577ms
+[15:38:21 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?TestId=5 - null null
+[15:38:22 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:38:22 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:38:22 INF] Executed DbCommand (3ms) [Parameters=[@__parameters_TestId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Results" AS r
+WHERE r."TestId" = @__parameters_TestId_0
+[15:38:22 INF] Executed DbCommand (4ms) [Parameters=[@__parameters_TestId_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Score", t."TakenAt", t."TestId", t."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t0."Id", t0."CreatedAt", t0."Description", t0."Title"
+FROM (
+    SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+    FROM "Results" AS r
+    WHERE r."TestId" = @__parameters_TestId_0
+    ORDER BY r."Id"
+    LIMIT @__p_2 OFFSET @__p_1
+) AS t
+INNER JOIN "AspNetUsers" AS a ON t."UserId" = a."Id"
+INNER JOIN "Tests" AS t0 ON t."TestId" = t0."Id"
+ORDER BY t."Id"
+[15:38:22 INF] Executing OkObjectResult, writing value of type 'KnowledgeCheck.DAL.Helpers.PagedList`1[[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:38:22 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 82.3693ms
+[15:38:22 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:38:22 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?TestId=5 - 200 null application/json; charset=utf-8 124.014ms
+[15:38:49 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?MinScore=84 - null null
+[15:38:49 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:38:49 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:38:49 INF] Executed DbCommand (3ms) [Parameters=[@__parameters_MinScore_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Results" AS r
+WHERE r."Score" >= @__parameters_MinScore_Value_0
+[15:38:49 INF] Executed DbCommand (1ms) [Parameters=[@__parameters_MinScore_Value_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Score", t."TakenAt", t."TestId", t."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t0."Id", t0."CreatedAt", t0."Description", t0."Title"
+FROM (
+    SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+    FROM "Results" AS r
+    WHERE r."Score" >= @__parameters_MinScore_Value_0
+    ORDER BY r."Id"
+    LIMIT @__p_2 OFFSET @__p_1
+) AS t
+INNER JOIN "AspNetUsers" AS a ON t."UserId" = a."Id"
+INNER JOIN "Tests" AS t0 ON t."TestId" = t0."Id"
+ORDER BY t."Id"
+[15:38:49 INF] Executing OkObjectResult, writing value of type 'KnowledgeCheck.DAL.Helpers.PagedList`1[[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:38:49 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 47.1805ms
+[15:38:49 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:38:49 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?MinScore=84 - 200 null application/json; charset=utf-8 63.8427ms
+[15:48:56 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:48:57 INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:48:57 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:48:57 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:48:57 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:48:57 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:48:57 INF] No migrations were applied. The database is already up to date.
+[15:48:57 INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:48:57 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:48:57 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[15:48:57 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[15:48:57 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[15:48:57 INF] Now listening on: https://localhost:7264
+[15:48:57 INF] Now listening on: http://localhost:5247
+[15:48:57 INF] Application started. Press Ctrl+C to shut down.
+[15:48:57 INF] Hosting environment: Development
+[15:48:57 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[15:50:04 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:50:04 INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:50:04 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:50:04 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:50:04 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:50:04 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:50:04 INF] No migrations were applied. The database is already up to date.
+[15:50:05 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:50:05 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:50:05 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[15:50:05 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[15:50:05 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[15:50:05 INF] Now listening on: https://localhost:7264
+[15:50:05 INF] Now listening on: http://localhost:5247
+[15:50:05 INF] Application started. Press Ctrl+C to shut down.
+[15:50:05 INF] Hosting environment: Development
+[15:50:05 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[15:50:06 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:50:06 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 178.5372ms
+[15:50:06 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:50:06 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 15.8423ms
+[15:50:06 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:50:06 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.9236ms
+[15:50:06 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:50:06 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.0049ms
+[15:50:29 INF] Request starting HTTP/2 POST https://localhost:7264/api/Results - application/json 46
+[15:50:29 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+[15:50:29 INF] AuthenticationScheme: Identity.Application was challenged.
+[15:50:29 INF] Request finished HTTP/2 POST https://localhost:7264/api/Results - 302 0 null 70.6527ms
+[15:50:29 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[15:50:29 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 5.4092ms
+[15:50:29 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[16:31:34 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[16:31:34 INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[16:31:34 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[16:31:34 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[16:31:34 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[16:31:34 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[16:31:34 INF] No migrations were applied. The database is already up to date.
+[16:31:34 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[16:31:34 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[16:31:34 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[16:31:34 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[16:31:34 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[16:31:35 INF] Now listening on: https://localhost:7264
+[16:31:35 INF] Now listening on: http://localhost:5247
+[16:31:35 INF] Application started. Press Ctrl+C to shut down.
+[16:31:35 INF] Hosting environment: Development
+[16:31:35 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[16:31:35 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[16:31:35 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 180.1459ms
+[16:31:35 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[16:31:35 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 19.7001ms
+[16:31:35 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[16:31:36 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.02ms
+[16:31:36 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[16:31:36 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.8279ms
+[22:21:44 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:21:44 INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:21:44 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:21:45 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:21:45 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:21:45 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:21:45 INF] No migrations were applied. The database is already up to date.
+[22:21:45 INF] Executed DbCommand (10ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:21:45 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:21:45 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:21:45 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:21:45 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:21:45 INF] Now listening on: https://localhost:7264
+[22:21:45 INF] Now listening on: http://localhost:5247
+[22:21:45 INF] Application started. Press Ctrl+C to shut down.
+[22:21:45 INF] Hosting environment: Development
+[22:21:45 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:21:46 INF] Request starting HTTP/2 GET https://localhost:7264/swagger - null null
+[22:21:46 INF] Request finished HTTP/2 GET https://localhost:7264/swagger - 301 0 null 119.1391ms
+[22:21:46 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:21:46 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 79.4011ms
+[22:21:46 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/swagger-ui.css - null null
+[22:21:46 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/swagger-ui-bundle.js - null null
+[22:21:46 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/swagger-ui-standalone-preset.js - null null
+[22:21:46 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:21:46 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 26.563ms
+[22:21:46 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:21:46 INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[22:21:46 INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[22:21:46 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 86.1149ms
+[22:21:46 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/swagger-ui.css - 200 152034 text/css 86.3615ms
+[22:21:46 INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[22:21:46 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 135.4059ms
+[22:21:46 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 98.8808ms
+[22:21:47 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:21:47 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.929ms
+[22:21:53 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:21:53 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:21:53 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:21:53 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 72.1904ms
+[22:21:53 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:21:53 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 8.8003ms
+[22:21:53 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:01 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:22:01 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:22:01 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:01 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 16.321ms
+[22:22:01 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:01 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 3.2994ms
+[22:22:01 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:03 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:22:03 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:22:03 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:03 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 16.0418ms
+[22:22:03 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:04 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 4.9517ms
+[22:22:04 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:04 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:22:04 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:22:04 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:04 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 9.9171ms
+[22:22:04 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:04 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 5.6367ms
+[22:22:04 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:04 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:22:04 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:22:04 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:04 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 6.1678ms
+[22:22:04 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:04 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 4.2536ms
+[22:22:04 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:05 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:22:05 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:22:05 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:05 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 6.0354ms
+[22:22:05 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:05 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 4.9432ms
+[22:22:05 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:05 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:22:05 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:22:05 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:05 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 6.0032ms
+[22:22:05 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:05 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 4.4034ms
+[22:22:05 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:05 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:22:05 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:22:05 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:05 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 5.668ms
+[22:22:05 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:05 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 4.5718ms
+[22:22:05 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:05 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:22:05 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:22:05 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:05 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 6.6945ms
+[22:22:05 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:05 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 4.8221ms
+[22:22:05 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:11 INF] Request starting HTTP/2 POST https://localhost:7264/api/Results - application/json 46
+[22:22:11 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+[22:22:11 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:11 INF] Request finished HTTP/2 POST https://localhost:7264/api/Results - 302 0 null 7.7387ms
+[22:22:11 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:11 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 5.516ms
+[22:22:11 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:14 INF] Request starting HTTP/2 POST https://localhost:7264/api/Results - application/json 46
+[22:22:14 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+[22:22:14 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:14 INF] Request finished HTTP/2 POST https://localhost:7264/api/Results - 302 0 null 5.8033ms
+[22:22:14 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:14 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 16.9457ms
+[22:22:14 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:22:15 INF] Request starting HTTP/2 POST https://localhost:7264/api/Results - application/json 46
+[22:22:15 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+[22:22:15 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:22:15 INF] Request finished HTTP/2 POST https://localhost:7264/api/Results - 302 0 null 7.9146ms
+[22:22:15 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:22:15 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 4.1889ms
+[22:22:15 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:24:48 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:24:48 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:24:48 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:24:48 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 12.1467ms
+[22:24:48 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:24:48 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 12.0373ms
+[22:24:48 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:28:54 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:28:54 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 33.0966ms
+[22:28:54 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:28:54 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:28:55 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 30.0846ms
+[22:28:55 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.2515ms
+[22:28:55 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:28:55 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/favicon-32x32.png - null null
+[22:28:55 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.2288ms
+[22:28:55 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[22:28:55 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/favicon-32x32.png - 200 628 image/png 39.833ms
+[22:29:01 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:29:01 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:29:01 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:29:01 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 6.8247ms
+[22:29:01 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:29:01 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 7.1452ms
+[22:29:01 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:29:07 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:29:07 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:29:07 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:29:07 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 25.3222ms
+[22:29:07 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:29:07 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 4.7656ms
+[22:29:07 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:29:08 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:29:08 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:29:08 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:29:08 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 6.7123ms
+[22:29:08 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:29:08 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 3.814ms
+[22:29:08 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:29:08 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:29:08 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:29:08 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:29:08 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 8.1586ms
+[22:29:08 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:29:08 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 5.858ms
+[22:29:08 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:29:08 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:29:08 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:29:08 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:29:08 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 5.7481ms
+[22:29:08 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:29:08 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 2.951ms
+[22:29:08 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:29:42 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:29:42 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:29:42 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:29:42 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 14.2356ms
+[22:29:42 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:29:42 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 2.3468ms
+[22:29:42 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:30:38 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:30:38 INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:30:38 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:30:38 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:30:38 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:30:38 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:30:38 INF] No migrations were applied. The database is already up to date.
+[22:30:39 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:30:39 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:30:39 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:30:39 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:30:39 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:30:39 INF] Now listening on: https://localhost:7264
+[22:30:39 INF] Now listening on: http://localhost:5247
+[22:30:39 INF] Application started. Press Ctrl+C to shut down.
+[22:30:39 INF] Hosting environment: Development
+[22:30:39 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:30:39 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:30:40 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 171.053ms
+[22:30:40 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:30:40 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 26.2614ms
+[22:30:40 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:30:40 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.17ms
+[22:30:40 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:30:40 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.7827ms
+[22:30:50 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:30:50 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:30:50 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:30:50 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 83.7637ms
+[22:30:50 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:30:50 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 7.0775ms
+[22:30:50 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:30:52 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:30:52 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:30:52 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:30:52 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 11.5429ms
+[22:30:52 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:30:52 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 5.273ms
+[22:30:52 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:43:41 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:43:41 INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:43:41 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:43:41 INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:43:41 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:43:41 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:43:41 INF] No migrations were applied. The database is already up to date.
+[22:43:42 INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:43:42 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:43:42 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:43:42 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:43:42 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:43:42 INF] Now listening on: https://localhost:7264
+[22:43:42 INF] Now listening on: http://localhost:5247
+[22:43:42 INF] Application started. Press Ctrl+C to shut down.
+[22:43:42 INF] Hosting environment: Development
+[22:43:42 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:43:43 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:43:43 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 175.659ms
+[22:43:43 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:43:43 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:43:43 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 18.3921ms
+[22:43:43 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.0144ms
+[22:43:44 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:43:44 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 60.6312ms
+[22:44:27 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:44:27 INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:44:27 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:44:27 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:44:27 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:44:27 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:44:27 INF] No migrations were applied. The database is already up to date.
+[22:44:28 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:44:28 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:44:28 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:44:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:44:28 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:44:28 INF] Now listening on: https://localhost:7264
+[22:44:28 INF] Now listening on: http://localhost:5247
+[22:44:28 INF] Application started. Press Ctrl+C to shut down.
+[22:44:28 INF] Hosting environment: Development
+[22:44:28 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:44:28 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:44:29 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 174.3398ms
+[22:44:29 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:44:29 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 34.8856ms
+[22:44:29 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:44:29 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.8922ms
+[22:44:29 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:44:29 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.0463ms
+[22:44:37 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:44:37 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:44:37 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:44:37 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 69.7571ms
+[22:44:37 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:44:37 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 6.5874ms
+[22:44:37 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:44:55 INF] Request starting HTTP/2 POST https://localhost:7264/api/Results - application/json 46
+[22:44:55 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+[22:44:55 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:44:55 INF] Request finished HTTP/2 POST https://localhost:7264/api/Results - 302 0 null 30.9811ms
+[22:44:56 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:44:56 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 5.8011ms
+[22:44:56 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:45:59 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:45:59 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:45:59 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:45:59 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 29.4436ms
+[22:45:59 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:45:59 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 7.606ms
+[22:45:59 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:49:41 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:49:41 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 153.381ms
+[22:49:42 INF] Request starting HTTP/2 GET https://localhost:7264/favicon.ico - null null
+[22:49:42 INF] Request finished HTTP/2 GET https://localhost:7264/favicon.ico - 404 0 null 33.799ms
+[22:49:42 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/favicon.ico, Response status code: 404
+[22:50:47 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:50:47 INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:50:47 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:50:47 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:50:47 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:50:47 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:50:47 INF] No migrations were applied. The database is already up to date.
+[22:50:47 INF] Executed DbCommand (11ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:50:47 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:50:47 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:50:47 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:50:47 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:50:48 INF] Now listening on: https://localhost:7264
+[22:50:48 INF] Now listening on: http://localhost:5247
+[22:50:48 INF] Application started. Press Ctrl+C to shut down.
+[22:50:48 INF] Hosting environment: Development
+[22:50:48 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:50:48 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:50:49 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 178.7742ms
+[22:50:49 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:50:49 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 18.2844ms
+[22:50:49 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:50:49 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.0181ms
+[22:50:49 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:50:50 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 68.8997ms
+[22:51:19 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:51:20 INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:51:20 INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:51:20 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:51:20 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:51:20 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:51:20 INF] No migrations were applied. The database is already up to date.
+[22:51:20 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:51:20 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:51:20 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:51:20 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:51:20 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:51:20 INF] Now listening on: https://localhost:7264
+[22:51:20 INF] Now listening on: http://localhost:5247
+[22:51:21 INF] Application started. Press Ctrl+C to shut down.
+[22:51:21 INF] Hosting environment: Development
+[22:51:21 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:51:22 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:51:22 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 304.7411ms
+[22:51:22 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:51:22 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:51:22 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 8.7773ms
+[22:51:22 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.8781ms
+[22:51:23 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:51:23 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.1673ms
+[22:51:31 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:51:31 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[22:51:31 INF] Route matched with {action = "GetAll", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[22:51:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+FROM "Results" AS r
+[22:52:01 INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[22:52:01 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API) in 30477.4534ms
+[22:52:01 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[22:52:01 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 500 null application/json; charset=utf-8 30588.9154ms
+[22:53:14 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:53:15 INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:53:15 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:53:15 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:53:15 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:53:15 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:53:15 INF] No migrations were applied. The database is already up to date.
+[22:53:15 INF] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:53:15 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:53:15 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:53:15 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:53:15 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:53:15 INF] Now listening on: https://localhost:7264
+[22:53:15 INF] Now listening on: http://localhost:5247
+[22:53:16 INF] Application started. Press Ctrl+C to shut down.
+[22:53:16 INF] Hosting environment: Development
+[22:53:16 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:53:16 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:53:16 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 257.8567ms
+[22:53:16 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:53:16 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 21.8711ms
+[22:53:17 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:53:17 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 188.93ms
+[22:53:18 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:53:18 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.5147ms
+[22:53:27 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:53:27 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:53:27 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:53:27 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 104.0507ms
+[22:53:27 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:53:27 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 6.1034ms
+[22:53:27 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:55:03 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:55:04 INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:55:04 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:55:04 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:55:04 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:55:04 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:55:04 INF] No migrations were applied. The database is already up to date.
+[22:55:04 INF] Executed DbCommand (9ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:55:04 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:55:04 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:55:04 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:55:04 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:55:05 INF] Now listening on: https://localhost:7264
+[22:55:05 INF] Now listening on: http://localhost:5247
+[22:55:05 INF] Application started. Press Ctrl+C to shut down.
+[22:55:05 INF] Hosting environment: Development
+[22:55:05 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:55:05 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:55:05 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 236.7202ms
+[22:55:05 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:55:05 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 36.7389ms
+[22:55:06 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:55:06 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.2936ms
+[22:55:06 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:55:06 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 68.0644ms
+[22:55:10 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:55:10 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[22:55:10 INF] AuthenticationScheme: Identity.Application was challenged.
+[22:55:10 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 142.7828ms
+[22:55:10 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[22:55:10 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 15.0792ms
+[22:55:10 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[22:55:49 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[22:55:49 INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:55:49 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:55:49 INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:55:50 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[22:55:50 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[22:55:50 INF] No migrations were applied. The database is already up to date.
+[22:55:50 INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:55:50 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[22:55:50 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[22:55:50 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[22:55:50 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[22:55:50 INF] Now listening on: https://localhost:7264
+[22:55:50 INF] Now listening on: http://localhost:5247
+[22:55:50 INF] Application started. Press Ctrl+C to shut down.
+[22:55:50 INF] Hosting environment: Development
+[22:55:50 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[22:55:51 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[22:55:51 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 292.6045ms
+[22:55:51 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[22:55:51 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 20.7367ms
+[22:55:51 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[22:55:51 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.3349ms
+[22:55:52 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[22:55:52 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.6789ms
+[22:55:58 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[22:55:58 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[22:55:58 INF] Route matched with {action = "GetAll", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[22:55:58 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+FROM "Results" AS r
+[22:56:13 INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[22:56:13 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API) in 14681.679ms
+[22:56:13 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[22:56:13 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 500 null application/json; charset=utf-8 14787.2449ms
+[23:09:31 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[23:09:31 INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:09:31 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:09:31 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:09:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:09:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:09:31 INF] No migrations were applied. The database is already up to date.
+[23:09:31 INF] Executed DbCommand (13ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:09:31 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:09:31 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[23:09:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[23:09:31 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[23:09:32 INF] Now listening on: https://localhost:7264
+[23:09:32 INF] Now listening on: http://localhost:5247
+[23:09:32 INF] Application started. Press Ctrl+C to shut down.
+[23:09:32 INF] Hosting environment: Development
+[23:09:32 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[23:09:33 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:09:33 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 289.6029ms
+[23:09:33 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:09:33 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 37.4104ms
+[23:09:33 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:09:33 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.4169ms
+[23:09:34 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:09:34 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.5076ms
+[23:09:38 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[23:09:38 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[23:09:38 INF] Route matched with {action = "GetAll", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[23:09:38 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+FROM "Results" AS r
+[23:09:38 INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[KnowledgeCheck.DAL.Entities.Result, KnowledgeCheck.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[23:09:38 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API) in 186.6589ms
+[23:09:38 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[23:09:38 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 200 null application/json; charset=utf-8 287.3836ms
+[23:11:27 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[23:11:27 INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:11:27 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:11:28 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:11:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:11:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:11:28 INF] No migrations were applied. The database is already up to date.
+[23:11:28 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:11:28 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:11:28 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[23:11:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[23:11:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[23:11:28 INF] Now listening on: https://localhost:7264
+[23:11:28 INF] Now listening on: http://localhost:5247
+[23:11:28 INF] Application started. Press Ctrl+C to shut down.
+[23:11:28 INF] Hosting environment: Development
+[23:11:28 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[23:11:29 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:11:29 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 286.718ms
+[23:11:29 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:11:29 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 26.1112ms
+[23:11:29 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:11:29 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 98.0901ms
+[23:11:30 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:11:31 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.3837ms
+[23:11:54 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[23:11:54 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:11:54 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:11:54 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 302 0 null 119.0982ms
+[23:11:54 INF] Request starting HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - null null
+[23:11:54 INF] Request finished HTTP/2 GET https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults - 404 0 null 9.0849ms
+[23:11:54 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7264/Account/Login, Response status code: 404
+[23:16:42 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:16:42 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:16:42 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:16:42 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 21.4138ms
+[23:16:42 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:16:42 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 4.8474ms
+[23:16:42 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:18:47 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:18:47 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:18:47 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:18:47 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 76.5937ms
+[23:18:47 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:18:47 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 4.981ms
+[23:18:47 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:19:02 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:19:02 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 48.3256ms
+[23:19:02 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:19:02 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:19:02 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 131.9166ms
+[23:19:02 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 464.1446ms
+[23:19:03 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:19:03 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 51.84ms
+[23:19:12 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:19:12 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:19:12 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:19:12 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 10.0132ms
+[23:19:12 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:19:12 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 4.2197ms
+[23:19:12 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:19:38 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:19:38 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 13.2299ms
+[23:19:38 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:19:38 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:19:38 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 64.9157ms
+[23:19:38 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 171.9849ms
+[23:19:39 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:19:39 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.1413ms
+[23:19:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:19:51 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:19:51 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:19:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 6.3952ms
+[23:19:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:19:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 6.7517ms
+[23:19:51 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:36:55 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[23:36:55 INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:36:55 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:36:55 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:36:55 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:36:55 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:36:55 INF] No migrations were applied. The database is already up to date.
+[23:36:55 INF] Executed DbCommand (10ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:36:55 INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:36:55 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[23:36:55 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[23:36:55 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[23:36:56 INF] Now listening on: https://localhost:7264
+[23:36:56 INF] Now listening on: http://localhost:5247
+[23:36:56 INF] Application started. Press Ctrl+C to shut down.
+[23:36:56 INF] Hosting environment: Development
+[23:36:56 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[23:36:57 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:36:57 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 308.0517ms
+[23:36:57 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:36:57 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 25.3222ms
+[23:36:57 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:36:57 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.1664ms
+[23:36:58 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:36:58 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.433ms
+[23:37:05 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[23:37:05 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[23:37:05 INF] Route matched with {action = "GetAll", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[23:37:05 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+FROM "Results" AS r
+[23:37:05 INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[KnowledgeCheck.DAL.Entities.Result, KnowledgeCheck.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[23:37:05 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API) in 143.8912ms
+[23:37:05 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[23:37:05 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 200 null application/json; charset=utf-8 247.824ms
+[23:37:18 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:37:18 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:37:18 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:37:18 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 38.3461ms
+[23:37:18 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:37:18 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 5.101ms
+[23:37:18 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:44:59 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[23:45:00 INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:45:00 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:45:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:45:00 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:45:00 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:45:00 INF] No migrations were applied. The database is already up to date.
+[23:45:00 INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:45:00 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:45:00 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[23:45:00 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[23:45:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[23:45:00 INF] Now listening on: https://localhost:7264
+[23:45:00 INF] Now listening on: http://localhost:5247
+[23:45:00 INF] Application started. Press Ctrl+C to shut down.
+[23:45:00 INF] Hosting environment: Development
+[23:45:00 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[23:45:01 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:45:01 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 216.1837ms
+[23:45:01 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:45:01 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 18.6878ms
+[23:45:02 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:45:02 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.1231ms
+[23:45:02 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:45:02 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.8254ms
+[23:45:28 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:45:28 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:45:28 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:45:28 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 69.8531ms
+[23:45:28 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:45:28 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 8.7317ms
+[23:45:28 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:46:31 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[23:46:31 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[23:46:31 INF] Route matched with {action = "GetAll", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[23:46:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+FROM "Results" AS r
+[23:46:31 INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[KnowledgeCheck.DAL.Entities.Result, KnowledgeCheck.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[23:46:31 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API) in 126.2778ms
+[23:46:31 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[23:46:31 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 200 null application/json; charset=utf-8 169.2295ms
+[23:47:16 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results - null null
+[23:47:16 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[23:47:16 INF] Route matched with {action = "GetAll", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[23:47:17 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+FROM "Results" AS r
+[23:47:17 INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[KnowledgeCheck.DAL.Entities.Result, KnowledgeCheck.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[23:47:17 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API) in 68.3212ms
+[23:47:17 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetAll (KnowledgeCheck.API)'
+[23:47:17 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results - 200 null application/json; charset=utf-8 90.4464ms
+[23:47:26 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:47:26 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:47:26 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:47:26 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 8.9429ms
+[23:47:26 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:47:26 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 4.3836ms
+[23:47:26 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:47:54 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:47:54 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:47:54 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:47:54 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 20.5591ms
+[23:47:54 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:47:54 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 8.1831ms
+[23:47:54 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:47:55 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:47:55 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:47:55 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:47:55 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 10.7873ms
+[23:47:55 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:47:55 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 6.7656ms
+[23:47:55 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:48:01 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:48:01 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:48:01 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:48:01 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 5.7801ms
+[23:48:01 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:48:01 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 5.6154ms
+[23:48:01 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:48:02 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:48:02 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:48:02 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:48:02 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 7.0623ms
+[23:48:02 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:48:02 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 4.4858ms
+[23:48:02 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:24 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[23:49:24 INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:49:24 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:49:25 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:49:25 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:49:25 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:49:25 INF] No migrations were applied. The database is already up to date.
+[23:49:25 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:49:25 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:49:25 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[23:49:25 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[23:49:25 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[23:49:25 INF] Now listening on: https://localhost:7264
+[23:49:25 INF] Now listening on: http://localhost:5247
+[23:49:25 INF] Application started. Press Ctrl+C to shut down.
+[23:49:25 INF] Hosting environment: Development
+[23:49:25 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[23:49:26 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:49:26 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 229.431ms
+[23:49:26 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:49:26 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 14.8619ms
+[23:49:26 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:49:26 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.5874ms
+[23:49:27 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:49:27 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.2137ms
+[23:49:40 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:49:41 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:41 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:41 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 63.3303ms
+[23:49:41 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:49:41 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 5.3435ms
+[23:49:41 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:43 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:49:43 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:43 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:43 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 10.7021ms
+[23:49:43 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:49:43 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 5.8655ms
+[23:49:43 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:45 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/2 - null null
+[23:49:45 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:45 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:45 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/2 - 302 0 null 30.5928ms
+[23:49:45 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F2 - null null
+[23:49:45 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F2 - 404 0 null 8.1979ms
+[23:49:45 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:48 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:48 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:48 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:48 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 12.0628ms
+[23:49:48 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:48 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 4.4954ms
+[23:49:48 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:48 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:48 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:48 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:48 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 7.5595ms
+[23:49:48 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:48 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 3.3863ms
+[23:49:48 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:49 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:49 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 5.1308ms
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 3.8638ms
+[23:49:49 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:49 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:49 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 6.6924ms
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 5.1877ms
+[23:49:49 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:49 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:49 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 5.4741ms
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 3.0939ms
+[23:49:49 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:49 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:49 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 5.296ms
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 4.9816ms
+[23:49:49 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:49 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:49 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 8.5669ms
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 2.3064ms
+[23:49:49 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:49 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:49 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 5.6732ms
+[23:49:49 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:49 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 3.548ms
+[23:49:49 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:50 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/51 - null null
+[23:49:50 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:50 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:50 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/51 - 302 0 null 9.8538ms
+[23:49:50 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - null null
+[23:49:50 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F51 - 404 0 null 3.6471ms
+[23:49:50 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:49:51 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:51 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 6.5333ms
+[23:49:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:49:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 4.3816ms
+[23:49:51 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:49:51 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:51 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 9.8614ms
+[23:49:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:49:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 4.1169ms
+[23:49:51 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:49:51 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:51 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 5.2488ms
+[23:49:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:49:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 3.7545ms
+[23:49:51 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:49:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:49:51 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:49:51 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:49:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 6.1309ms
+[23:49:51 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:49:51 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 6.1936ms
+[23:49:51 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:50:12 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:50:12 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:50:12 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:50:12 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 5.9707ms
+[23:50:12 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:50:12 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 4.9079ms
+[23:50:12 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:50:12 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:50:12 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:50:12 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:50:12 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 5.421ms
+[23:50:12 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:50:12 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 4.6696ms
+[23:50:12 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:50:12 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:50:12 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:50:12 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:50:12 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 28.7188ms
+[23:50:12 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:50:12 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 8.5396ms
+[23:50:12 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:50:13 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:50:13 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:50:13 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:50:13 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 5.2422ms
+[23:50:13 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:50:13 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 3.2243ms
+[23:50:13 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:50:13 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:50:13 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:50:13 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:50:13 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 7.4371ms
+[23:50:13 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:50:13 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 3.4319ms
+[23:50:13 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:50:13 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/1 - null null
+[23:50:13 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:50:13 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:50:13 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/1 - 302 0 null 5.3482ms
+[23:50:13 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - null null
+[23:50:13 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F1 - 404 0 null 2.7978ms
+[23:50:13 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:52:50 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:52:50 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 21.3155ms
+[23:52:50 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:52:50 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:52:50 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 5.0203ms
+[23:52:50 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.118ms
+[23:52:51 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:52:51 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.2832ms
+[23:53:02 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[23:53:02 INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:53:02 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:53:02 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:53:03 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[23:53:03 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[23:53:03 INF] No migrations were applied. The database is already up to date.
+[23:53:03 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:53:03 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[23:53:03 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[23:53:03 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[23:53:03 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[23:53:03 INF] Now listening on: https://localhost:7264
+[23:53:03 INF] Now listening on: http://localhost:5247
+[23:53:03 INF] Application started. Press Ctrl+C to shut down.
+[23:53:03 INF] Hosting environment: Development
+[23:53:03 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[23:53:04 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:53:04 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 287.6134ms
+[23:53:04 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:53:04 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 19.6416ms
+[23:53:04 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:53:04 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.4601ms
+[23:53:05 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:53:05 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.4665ms
+[23:53:32 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:53:32 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:53:32 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:53:32 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 78.01ms
+[23:53:32 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:53:32 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 7.103ms
+[23:53:32 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:53:43 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:53:43 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:53:43 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:53:43 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 12.9725ms
+[23:53:43 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:53:43 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 4.5959ms
+[23:53:43 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:53:45 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:53:45 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:53:45 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:53:45 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 31.4761ms
+[23:53:45 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:53:45 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 5.21ms
+[23:53:45 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:53:45 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:53:45 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:53:45 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:53:45 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 6.5625ms
+[23:53:45 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:53:45 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 6.3061ms
+[23:53:45 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:55:26 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:55:26 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:55:26 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:55:26 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 19.3639ms
+[23:55:26 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:55:26 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 10.4672ms
+[23:55:26 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404
+[23:56:21 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[23:56:21 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 76.5761ms
+[23:56:21 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[23:56:21 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[23:56:21 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 13.1104ms
+[23:56:21 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 426.7625ms
+[23:56:22 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[23:56:22 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.4134ms
+[23:56:29 INF] Request starting HTTP/2 DELETE https://localhost:7264/api/Results/3 - null null
+[23:56:29 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+[23:56:29 INF] AuthenticationScheme: Identity.Application was challenged.
+[23:56:29 INF] Request finished HTTP/2 DELETE https://localhost:7264/api/Results/3 - 302 0 null 7.0671ms
+[23:56:29 INF] Request starting HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - null null
+[23:56:29 INF] Request finished HTTP/2 DELETE https://localhost:7264/Account/Login?ReturnUrl=%2Fapi%2FResults%2F3 - 404 0 null 8.3723ms
+[23:56:29 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7264/Account/Login, Response status code: 404

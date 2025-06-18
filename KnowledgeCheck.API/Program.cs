@@ -11,6 +11,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using KnowledgeCheck.DAL.Data;
+using Mapster;
+using MapsterMapper;
+using KnowledgeCheck.DAL.Helpers;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -56,20 +59,6 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-builder.Services.AddIdentityCore<User>(options =>
-{
-    options.SignIn.RequireConfirmedAccount = false;
-    options.SignIn.RequireConfirmedEmail = true;
-    options.Password.RequireDigit = false;
-    options.Password.RequireLowercase = false;
-    options.Password.RequireUppercase = false;
-    options.Password.RequireNonAlphanumeric = false;
-    options.Password.RequiredLength = 6;
-})
-    .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<KnowledgeCheckDbContext>()
-    .AddDefaultTokenProviders();
-
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -95,6 +84,15 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddDALServices(builder.Configuration);
 builder.Services.AddBusinessLogic();
+
+builder.Services.AddSingleton(TypeAdapterConfig.GlobalSettings);
+builder.Services.AddScoped<IMapper, ServiceMapper>();
+builder.Services.AddScoped(typeof(ISortHelper<>), typeof(SortHelper<>));
+
+
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<KnowledgeCheckDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 

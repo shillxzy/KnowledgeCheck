@@ -1,5 +1,7 @@
 ﻿using KnowledgeCheck.BLL.DTOs.User;
+using KnowledgeCheck.BLL.Services;
 using KnowledgeCheck.BLL.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KnowledgeCheck.API.Controllers
@@ -41,6 +43,14 @@ namespace KnowledgeCheck.API.Controllers
         {
             await _userService.DeleteUserAsync(id);
             return NoContent();
+        }
+
+        [HttpGet("filter")]
+      // [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetFiltered([FromQuery] UserFilterDto filter)
+        {
+            var records = await _userService.GetFilteredAsync(filter);
+            return Ok(records);
         }
     }
 }

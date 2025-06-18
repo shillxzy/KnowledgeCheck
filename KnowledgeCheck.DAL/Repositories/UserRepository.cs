@@ -45,6 +45,12 @@ namespace KnowledgeCheck.DAL.Repositories
         {
             await _context.SaveChangesAsync();
         }
+
+        public IQueryable<User> GetAllQueryable()
+        {
+            return _context.Users.AsQueryable();
+        }
+
     }
 }
 

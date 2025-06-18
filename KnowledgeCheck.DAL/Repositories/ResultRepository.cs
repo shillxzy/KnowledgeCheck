@@ -1,5 +1,7 @@
 ﻿using KnowledgeCheck.DAL.Data;
 using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Entities.HelpModels;
+using KnowledgeCheck.DAL.Helpers;
 using KnowledgeCheck.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -45,5 +47,43 @@ namespace KnowledgeCheck.DAL.Repositories
                 .Where(r => r.UserId == userId)
                 .ToListAsync();
         }
+
+
+        public async Task<PagedList<Result>> GetAllPaginatedAsync(ResultParameters parameters, ISortHelper<Result> sortHelper, CancellationToken cancellationToken = default)
+        {
+            var query = _dbSet
+                .Include(r => r.User)
+                .Include(r => r.Test)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(parameters.UserId))
+                query = query.Where(r => r.UserId == parameters.UserId);
+
+            if (parameters.TestId is not null)
+                query = query.Where(r => r.TestId == parameters.TestId);
+
+            if (parameters.TakenFrom.HasValue)
+                query = query.Where(r => r.TakenAt >= parameters.TakenFrom.Value);
+
+            if (parameters.TakenTo.HasValue)
+                query = query.Where(r => r.TakenAt <= parameters.TakenTo.Value);
+
+            if (parameters.MinScore.HasValue)
+                query = query.Where(r => r.Score >= parameters.MinScore.Value);
+
+            if (parameters.MaxScore.HasValue)
+                query = query.Where(r => r.Score <= parameters.MaxScore.Value);
+
+
+            query = sortHelper.ApplySort(query, parameters.OrderBy);
+
+            return await PagedList<Result>.ToPagedListAsync(
+                query.AsNoTracking(),
+                parameters.PageNumber,
+                parameters.PageSize,
+                cancellationToken
+            );
+        }
+
     }
 }

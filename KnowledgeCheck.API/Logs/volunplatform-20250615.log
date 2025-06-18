@@ -1,0 +1,819 @@
+[14:55:36 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[14:55:36 INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[14:55:36 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[14:55:36 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[14:55:36 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[14:55:36 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[14:55:36 INF] No migrations were applied. The database is already up to date.
+[14:55:37 INF] Executed DbCommand (12ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[14:55:37 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[14:55:37 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[14:55:37 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[14:55:37 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[14:55:37 INF] Now listening on: https://localhost:7264
+[14:55:37 INF] Now listening on: http://localhost:5247
+[14:55:37 INF] Application started. Press Ctrl+C to shut down.
+[14:55:37 INF] Hosting environment: Development
+[14:55:37 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[14:55:39 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[14:55:39 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 202.9738ms
+[14:55:39 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[14:55:39 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 17.486ms
+[14:55:39 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[14:55:39 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.4222ms
+[14:55:40 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[14:55:40 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.2067ms
+[14:57:37 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=score - null null
+[14:57:37 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[14:57:37 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[14:58:25 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 47833.3768ms
+[14:58:25 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[14:58:26 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Controllers\ResultsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[14:58:26 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=score - 500 null application/json 48867.0082ms
+[14:58:36 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=score - null null
+[14:58:36 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[14:58:36 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[14:58:39 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 3012.4865ms
+[14:58:39 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[14:58:40 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Controllers\ResultsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[14:58:40 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=score - 500 null application/json 3783.0356ms
+[15:00:00 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=1 - null null
+[15:00:00 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:00:00 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:00:03 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 3144.7372ms
+[15:00:03 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:00:03 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Controllers\ResultsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[15:00:03 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=1 - 500 null application/json 3865.5579ms
+[15:00:06 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=1 - null null
+[15:00:06 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:00:06 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:00:09 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 2563.3854ms
+[15:00:09 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:00:09 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Controllers\ResultsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[15:00:09 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=1 - 500 null application/json 3193.9867ms
+[15:03:44 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=score - null null
+[15:03:44 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:03:44 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:04:10 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 26086.352ms
+[15:04:10 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:04:11 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context)
+[15:04:11 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20&OrderBy=score - 500 null application/json 26887.4732ms
+[15:13:50 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20 - null null
+[15:13:50 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:13:50 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:13:55 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 4772.8717ms
+[15:13:55 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:13:55 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context)
+[15:13:55 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user1&TestId=1&TakenFrom=2025-06-15&TakenTo=2025-06-15&MinScore=1&MaxScore=12&PageNumber=2&PageSize=20 - 500 null application/json 5571.957ms
+[15:14:23 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:14:24 INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:14:24 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:14:24 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:14:24 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:14:24 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:14:24 INF] No migrations were applied. The database is already up to date.
+[15:14:24 INF] Executed DbCommand (46ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:14:25 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:14:25 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[15:14:25 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[15:14:25 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[15:14:25 INF] Now listening on: https://localhost:7264
+[15:14:25 INF] Now listening on: http://localhost:5247
+[15:14:25 INF] Application started. Press Ctrl+C to shut down.
+[15:14:25 INF] Hosting environment: Development
+[15:14:25 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[15:14:25 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:14:26 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 227.8732ms
+[15:14:26 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:14:26 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 24.5276ms
+[15:14:26 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:14:26 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.1466ms
+[15:14:26 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:14:26 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.5183ms
+[15:15:01 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=1&TakenTo=1&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:15:01 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:15:01 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:15:01 INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+[15:15:01 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 89.6523ms
+[15:15:01 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:15:01 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=1&TakenTo=1&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 400 null application/problem+json; charset=utf-8 234.0488ms
+[15:16:52 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:16:52 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:16:52 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:16:58 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 6344.7081ms
+[15:16:58 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:16:59 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Controllers\ResultsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[15:16:59 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 500 null application/json 7556.2563ms
+[15:18:16 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:18:16 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:18:16 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:18:53 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 37268.0003ms
+[15:18:53 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:18:54 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Controllers\ResultsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[15:18:54 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 500 null application/json 38094.1661ms
+[15:21:16 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:21:16 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:21:16 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:21:19 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 2730.3037ms
+[15:21:19 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:21:19 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Controllers\ResultsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[15:21:19 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 500 null application/json 3395.3136ms
+[15:21:24 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=1&TakenTo=1&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:21:24 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:21:24 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:21:24 INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+[15:21:24 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 3.5252ms
+[15:21:24 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:21:24 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=1&TakenTo=1&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 400 null application/problem+json; charset=utf-8 16.5212ms
+[15:22:53 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:22:53 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:22:53 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:23:33 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 39914.8986ms
+[15:23:33 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:23:42 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.BLL\Services\ResultService.cs:line 28
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Controllers\ResultsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API\Middlewares\GlobalExceptionHandlingMiddleware.cs:line 23
+[15:23:42 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 500 null application/json 48518.4972ms
+[15:29:34 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:29:35 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:29:35 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:33:25 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 230198.2884ms
+[15:33:25 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:33:25 ERR] Unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at KnowledgeCheck.DAL.Repositories.ResultRepository.GetAllPaginatedAsync(ResultParameters parameters, ISortHelper`1 sortHelper, CancellationToken cancellationToken) in C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.DAL\Repositories\ResultRepository.cs:line 71
+   at KnowledgeCheck.BLL.Services.ResultService.GetPaginatedAsync(ResultParameters parameters, CancellationToken cancellationToken)
+   at KnowledgeCheck.API.Controllers.ResultsController.GetPaginated(ResultParameters parameters, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at KnowledgeCheck.API.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(HttpContext context)
+[15:33:25 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 500 null application/json 230940.5526ms
+[15:34:25 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:34:25 INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:34:25 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:34:25 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:34:25 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:34:25 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:34:25 INF] No migrations were applied. The database is already up to date.
+[15:34:25 INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:34:25 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:34:25 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[15:34:25 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[15:34:25 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[15:34:26 INF] Now listening on: https://localhost:7264
+[15:34:26 INF] Now listening on: http://localhost:5247
+[15:34:26 INF] Application started. Press Ctrl+C to shut down.
+[15:34:26 INF] Hosting environment: Development
+[15:34:26 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[15:34:27 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:34:27 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 203.4787ms
+[15:34:27 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:34:27 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 29.6416ms
+[15:34:27 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:34:27 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.1951ms
+[15:34:28 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:34:28 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.1861ms
+[15:42:41 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:42:41 INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:42:41 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:42:41 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:42:41 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:42:41 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:42:41 INF] No migrations were applied. The database is already up to date.
+[15:42:41 INF] Executed DbCommand (9ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:42:41 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:42:41 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[15:42:41 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[15:42:41 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[15:42:42 INF] Now listening on: https://localhost:7264
+[15:42:42 INF] Now listening on: http://localhost:5247
+[15:42:42 INF] Application started. Press Ctrl+C to shut down.
+[15:42:42 INF] Hosting environment: Development
+[15:42:42 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[15:42:42 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:42:42 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:42:42 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 200.952ms
+[15:42:42 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 20.932ms
+[15:42:42 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:42:42 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.0009ms
+[15:42:43 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:42:43 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.7614ms
+[15:43:28 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T00%3A00%3A00&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:43:29 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:43:29 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:43:29 INF] Executed DbCommand (13ms) [Parameters=[@__parameters_UserId_0='?', @__parameters_TestId_1='?' (DbType = Int32), @__parameters_TakenFrom_2='?' (DbType = DateTime), @__parameters_TakenTo_3='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Results" AS r
+WHERE r."UserId" = @__parameters_UserId_0 AND r."TestId" = @__parameters_TestId_1 AND r."TakenAt" >= @__parameters_TakenFrom_2 AND r."TakenAt" <= @__parameters_TakenTo_3
+[15:43:29 INF] Executed DbCommand (4ms) [Parameters=[@__parameters_UserId_0='?', @__parameters_TestId_1='?' (DbType = Int32), @__parameters_TakenFrom_2='?' (DbType = DateTime), @__parameters_TakenTo_3='?' (DbType = DateTime), @__p_5='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Score", t."TakenAt", t."TestId", t."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t0."Id", t0."CreatedAt", t0."Description", t0."Title"
+FROM (
+    SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+    FROM "Results" AS r
+    WHERE r."UserId" = @__parameters_UserId_0 AND r."TestId" = @__parameters_TestId_1 AND r."TakenAt" >= @__parameters_TakenFrom_2 AND r."TakenAt" <= @__parameters_TakenTo_3
+    ORDER BY r."Id"
+    LIMIT @__p_5 OFFSET @__p_4
+) AS t
+INNER JOIN "AspNetUsers" AS a ON t."UserId" = a."Id"
+INNER JOIN "Tests" AS t0 ON t."TestId" = t0."Id"
+ORDER BY t."Id"
+[15:43:29 INF] Executing OkObjectResult, writing value of type 'KnowledgeCheck.DAL.Helpers.PagedList`1[[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:43:29 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 774.1348ms
+[15:43:29 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:43:29 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=user&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T00%3A00%3A00&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 200 null application/json; charset=utf-8 910.8494ms
+[15:46:06 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:46:06 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 14.1273ms
+[15:46:06 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:46:06 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:46:06 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 9.8144ms
+[15:46:06 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.8571ms
+[15:46:07 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:46:07 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/favicon-32x32.png - null null
+[15:46:07 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.4492ms
+[15:46:07 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[15:46:07 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/favicon-32x32.png - 200 628 image/png 20.8421ms
+[15:46:17 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:46:17 INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:46:17 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:46:17 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:46:17 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:46:17 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:46:17 INF] No migrations were applied. The database is already up to date.
+[15:46:17 INF] Executed DbCommand (10ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:46:18 INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:46:18 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[15:46:18 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[15:46:18 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[15:46:18 INF] Now listening on: https://localhost:7264
+[15:46:18 INF] Now listening on: http://localhost:5247
+[15:46:18 INF] Application started. Press Ctrl+C to shut down.
+[15:46:18 INF] Hosting environment: Development
+[15:46:18 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[15:46:18 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:46:19 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 168.9615ms
+[15:46:19 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:46:19 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 16.8551ms
+[15:46:19 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:46:19 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.7112ms
+[15:46:19 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:46:19 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.9308ms
+[15:46:59 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T00%3A00%3A00&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:46:59 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:46:59 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:46:59 INF] Executed DbCommand (11ms) [Parameters=[@__parameters_UserId_0='?', @__parameters_TestId_1='?' (DbType = Int32), @__parameters_TakenFrom_Value_2='?' (DbType = DateTime), @__parameters_TakenTo_Value_3='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Results" AS r
+WHERE r."UserId" = @__parameters_UserId_0 AND r."TestId" = @__parameters_TestId_1 AND r."TakenAt" >= @__parameters_TakenFrom_Value_2 AND r."TakenAt" <= @__parameters_TakenTo_Value_3
+[15:46:59 INF] Executed DbCommand (2ms) [Parameters=[@__parameters_UserId_0='?', @__parameters_TestId_1='?' (DbType = Int32), @__parameters_TakenFrom_Value_2='?' (DbType = DateTime), @__parameters_TakenTo_Value_3='?' (DbType = DateTime), @__p_5='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Score", t."TakenAt", t."TestId", t."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t0."Id", t0."CreatedAt", t0."Description", t0."Title"
+FROM (
+    SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+    FROM "Results" AS r
+    WHERE r."UserId" = @__parameters_UserId_0 AND r."TestId" = @__parameters_TestId_1 AND r."TakenAt" >= @__parameters_TakenFrom_Value_2 AND r."TakenAt" <= @__parameters_TakenTo_Value_3
+    ORDER BY r."Id"
+    LIMIT @__p_5 OFFSET @__p_4
+) AS t
+INNER JOIN "AspNetUsers" AS a ON t."UserId" = a."Id"
+INNER JOIN "Tests" AS t0 ON t."TestId" = t0."Id"
+ORDER BY t."Id"
+[15:46:59 INF] Executing OkObjectResult, writing value of type 'KnowledgeCheck.DAL.Helpers.PagedList`1[[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:46:59 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 589.1513ms
+[15:46:59 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:46:59 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T00%3A00%3A00&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 200 null application/json; charset=utf-8 750.3697ms
+[15:47:59 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:47:59 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:47:59 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:47:59 INF] Executed DbCommand (1ms) [Parameters=[@__parameters_UserId_0='?', @__parameters_TestId_1='?' (DbType = Int32), @__parameters_TakenFrom_Value_2='?' (DbType = DateTime), @__parameters_TakenTo_Value_3='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Results" AS r
+WHERE r."UserId" = @__parameters_UserId_0 AND r."TestId" = @__parameters_TestId_1 AND r."TakenAt" >= @__parameters_TakenFrom_Value_2 AND r."TakenAt" <= @__parameters_TakenTo_Value_3
+[15:47:59 INF] Executed DbCommand (1ms) [Parameters=[@__parameters_UserId_0='?', @__parameters_TestId_1='?' (DbType = Int32), @__parameters_TakenFrom_Value_2='?' (DbType = DateTime), @__parameters_TakenTo_Value_3='?' (DbType = DateTime), @__p_5='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Score", t."TakenAt", t."TestId", t."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t0."Id", t0."CreatedAt", t0."Description", t0."Title"
+FROM (
+    SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+    FROM "Results" AS r
+    WHERE r."UserId" = @__parameters_UserId_0 AND r."TestId" = @__parameters_TestId_1 AND r."TakenAt" >= @__parameters_TakenFrom_Value_2 AND r."TakenAt" <= @__parameters_TakenTo_Value_3
+    ORDER BY r."Id"
+    LIMIT @__p_5 OFFSET @__p_4
+) AS t
+INNER JOIN "AspNetUsers" AS a ON t."UserId" = a."Id"
+INNER JOIN "Tests" AS t0 ON t."TestId" = t0."Id"
+ORDER BY t."Id"
+[15:47:59 INF] Executing OkObjectResult, writing value of type 'KnowledgeCheck.DAL.Helpers.PagedList`1[[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:47:59 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 61.6562ms
+[15:47:59 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:47:59 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 200 null application/json; charset=utf-8 83.8003ms
+[15:48:19 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:48:19 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 13.5297ms
+[15:48:19 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:48:19 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:48:19 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 6.7822ms
+[15:48:19 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.3059ms
+[15:48:19 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:48:19 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.7053ms
+[15:48:28 INF] User profile is available. Using 'C:\Users\dmska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[15:48:28 INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:48:28 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:48:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:48:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[15:48:28 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[15:48:28 INF] No migrations were applied. The database is already up to date.
+[15:48:29 INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:48:29 INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+[15:48:29 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+[15:48:29 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Tests" AS t)
+[15:48:29 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Results" AS r)
+[15:48:29 INF] Now listening on: https://localhost:7264
+[15:48:29 INF] Now listening on: http://localhost:5247
+[15:48:29 INF] Application started. Press Ctrl+C to shut down.
+[15:48:29 INF] Hosting environment: Development
+[15:48:29 INF] Content root path: C:\Users\dmska\source\repos\KnowledgeCheck\KnowledgeCheck.API
+[15:48:30 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/index.html - null null
+[15:48:30 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/index.html - 200 null text/html;charset=utf-8 145.1411ms
+[15:48:30 INF] Request starting HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - null null
+[15:48:30 INF] Request finished HTTP/2 GET https://localhost:7264/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 24.2447ms
+[15:48:30 INF] Request starting HTTP/2 GET https://localhost:7264/_vs/browserLink - null null
+[15:48:30 INF] Request finished HTTP/2 GET https://localhost:7264/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.0372ms
+[15:48:31 INF] Request starting HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - null null
+[15:48:31 INF] Request finished HTTP/2 GET https://localhost:7264/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.5507ms
+[15:49:28 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - null null
+[15:49:29 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:49:29 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:49:29 INF] Executed DbCommand (8ms) [Parameters=[@__parameters_UserId_0='?', @__parameters_TestId_1='?' (DbType = Int32), @__parameters_TakenFrom_Value_2='?' (DbType = DateTime), @__parameters_TakenTo_Value_3='?' (DbType = DateTime), @__parameters_MinScore_Value_4='?' (DbType = Int32), @__parameters_MaxScore_Value_5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Results" AS r
+WHERE r."UserId" = @__parameters_UserId_0 AND r."TestId" = @__parameters_TestId_1 AND r."TakenAt" >= @__parameters_TakenFrom_Value_2 AND r."TakenAt" <= @__parameters_TakenTo_Value_3 AND r."Score" >= @__parameters_MinScore_Value_4 AND r."Score" <= @__parameters_MaxScore_Value_5
+[15:49:29 INF] Executed DbCommand (2ms) [Parameters=[@__parameters_UserId_0='?', @__parameters_TestId_1='?' (DbType = Int32), @__parameters_TakenFrom_Value_2='?' (DbType = DateTime), @__parameters_TakenTo_Value_3='?' (DbType = DateTime), @__parameters_MinScore_Value_4='?' (DbType = Int32), @__parameters_MaxScore_Value_5='?' (DbType = Int32), @__p_7='?' (DbType = Int32), @__p_6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Score", t."TakenAt", t."TestId", t."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t0."Id", t0."CreatedAt", t0."Description", t0."Title"
+FROM (
+    SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+    FROM "Results" AS r
+    WHERE r."UserId" = @__parameters_UserId_0 AND r."TestId" = @__parameters_TestId_1 AND r."TakenAt" >= @__parameters_TakenFrom_Value_2 AND r."TakenAt" <= @__parameters_TakenTo_Value_3 AND r."Score" >= @__parameters_MinScore_Value_4 AND r."Score" <= @__parameters_MaxScore_Value_5
+    ORDER BY r."Id"
+    LIMIT @__p_7 OFFSET @__p_6
+) AS t
+INNER JOIN "AspNetUsers" AS a ON t."UserId" = a."Id"
+INNER JOIN "Tests" AS t0 ON t."TestId" = t0."Id"
+ORDER BY t."Id"
+[15:49:29 INF] Executing OkObjectResult, writing value of type 'KnowledgeCheck.DAL.Helpers.PagedList`1[[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:49:29 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 553.0892ms
+[15:49:29 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:49:29 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?UserId=1&TestId=1&TakenFrom=2025-06-15T00%3A00%3A00&TakenTo=2025-06-15T23%3A59%3A59&MinScore=1&MaxScore=100&PageNumber=1&PageSize=20 - 200 null application/json; charset=utf-8 691.5277ms
+[15:51:47 INF] Request starting HTTP/2 GET https://localhost:7264/api/Results/paginated?TakenFrom=2025-06-14%2010%3A54%3A26.550592%2B03&TakenTo=2025-06-14%2010%3A54%3A26.550592%2B03&MinScore=1&MaxScore=84 - null null
+[15:51:47 INF] Executing endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:51:47 INF] Route matched with {action = "GetPaginated", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginated(KnowledgeCheck.DAL.Entities.HelpModels.ResultParameters, System.Threading.CancellationToken) on controller KnowledgeCheck.API.Controllers.ResultsController (KnowledgeCheck.API).
+[15:51:47 INF] Executed DbCommand (2ms) [Parameters=[@__parameters_TakenFrom_Value_0='?' (DbType = DateTime), @__parameters_TakenTo_Value_1='?' (DbType = DateTime), @__parameters_MinScore_Value_2='?' (DbType = Int32), @__parameters_MaxScore_Value_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Results" AS r
+WHERE r."TakenAt" >= @__parameters_TakenFrom_Value_0 AND r."TakenAt" <= @__parameters_TakenTo_Value_1 AND r."Score" >= @__parameters_MinScore_Value_2 AND r."Score" <= @__parameters_MaxScore_Value_3
+[15:51:47 INF] Executed DbCommand (2ms) [Parameters=[@__parameters_TakenFrom_Value_0='?' (DbType = DateTime), @__parameters_TakenTo_Value_1='?' (DbType = DateTime), @__parameters_MinScore_Value_2='?' (DbType = Int32), @__parameters_MaxScore_Value_3='?' (DbType = Int32), @__p_5='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Score", t."TakenAt", t."TestId", t."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t0."Id", t0."CreatedAt", t0."Description", t0."Title"
+FROM (
+    SELECT r."Id", r."Score", r."TakenAt", r."TestId", r."UserId"
+    FROM "Results" AS r
+    WHERE r."TakenAt" >= @__parameters_TakenFrom_Value_0 AND r."TakenAt" <= @__parameters_TakenTo_Value_1 AND r."Score" >= @__parameters_MinScore_Value_2 AND r."Score" <= @__parameters_MaxScore_Value_3
+    ORDER BY r."Id"
+    LIMIT @__p_5 OFFSET @__p_4
+) AS t
+INNER JOIN "AspNetUsers" AS a ON t."UserId" = a."Id"
+INNER JOIN "Tests" AS t0 ON t."TestId" = t0."Id"
+ORDER BY t."Id"
+[15:51:47 INF] Executing OkObjectResult, writing value of type 'KnowledgeCheck.DAL.Helpers.PagedList`1[[KnowledgeCheck.BLL.DTOs.Result.ResultResponseDto, KnowledgeCheck.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[15:51:47 INF] Executed action KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API) in 80.8625ms
+[15:51:47 INF] Executed endpoint 'KnowledgeCheck.API.Controllers.ResultsController.GetPaginated (KnowledgeCheck.API)'
+[15:51:47 INF] Request finished HTTP/2 GET https://localhost:7264/api/Results/paginated?TakenFrom=2025-06-14%2010%3A54%3A26.550592%2B03&TakenTo=2025-06-14%2010%3A54%3A26.550592%2B03&MinScore=1&MaxScore=84 - 200 null application/json; charset=utf-8 124.9311ms

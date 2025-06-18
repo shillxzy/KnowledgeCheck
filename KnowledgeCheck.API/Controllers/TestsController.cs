@@ -1,5 +1,7 @@
 ﻿using KnowledgeCheck.BLL.DTOs.Test;
+using KnowledgeCheck.BLL.Services;
 using KnowledgeCheck.BLL.Services.Interfaces;
+using KnowledgeCheck.DAL.Entities.HelpModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KnowledgeCheck.API.Controllers
@@ -40,6 +42,16 @@ namespace KnowledgeCheck.API.Controllers
         {
             await _testService.DeleteTestAsync(id);
             return NoContent();
+        }
+
+
+        [HttpGet("paginated")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetPaginated([FromQuery] TestParameters parameters, CancellationToken cancellationToken)
+        {
+            var paginatedResults = await _testService.GetPaginatedAsync(parameters, cancellationToken);
+            return Ok(paginatedResults);
         }
     }
 }

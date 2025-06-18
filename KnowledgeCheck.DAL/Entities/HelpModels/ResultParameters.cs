@@ -8,7 +8,7 @@ namespace KnowledgeCheck.DAL.Entities.HelpModels
 {
     public class ResultParameters : QueryStringParameters
     {
-        public int? UserId { get; set; }
+        public string? UserId { get; set; }
         public int? TestId { get; set; }
         public DateTime? TakenFrom { get; set; }
         public DateTime? TakenTo { get; set; }

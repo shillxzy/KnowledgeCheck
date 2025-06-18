@@ -406,9 +406,9 @@
             "type": "string",
             "nullable": true
           },
-          "expiresIn": {
-            "type": "integer",
-            "format": "int32"
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -447,9 +447,9 @@
             "type": "string",
             "nullable": true
           },
-          "expiresIn": {
-            "type": "integer",
-            "format": "int32"
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

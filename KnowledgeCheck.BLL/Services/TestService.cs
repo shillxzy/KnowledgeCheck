@@ -2,6 +2,8 @@
 using KnowledgeCheck.BLL.Exceptions;
 using KnowledgeCheck.BLL.Services.Interfaces;
 using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Entities.HelpModels;
+using KnowledgeCheck.DAL.Helpers;
 using KnowledgeCheck.DAL.Repositories.Interfaces;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +13,7 @@ namespace KnowledgeCheck.BLL.Services
     public class TestService : ITestService
     {
         private readonly ITestRepository _testRepository;
-
+        private readonly ISortHelper<Test> _testSortHelper;
         public TestService(ITestRepository testRepository)
         {
             _testRepository = testRepository;
@@ -21,6 +23,11 @@ namespace KnowledgeCheck.BLL.Services
         {
             var test = await _testRepository.GetTestByIdAsync(id) ?? throw new TestNotFoundException();
             return test.Adapt<TestResponseDto>();
+        }
+
+        public async Task<PagedList<Test>> GetPaginatedAsync(TestParameters parameters, CancellationToken cancellationToken)
+        {
+            return await _testRepository.GetAllPaginatedAsync(parameters, _testSortHelper, cancellationToken);
         }
 
         public async Task<IEnumerable<TestResponseDto>> GetAllAsync()

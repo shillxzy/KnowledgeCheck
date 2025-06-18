@@ -9,7 +9,7 @@ namespace KnowledgeCheck.DAL.Entities
 {
     public class User : IdentityUser
     {
-       public string Role { get; set; } = "User";
+       public string Role { get; set; }
         public DateTime CreatedAt { get; set; }
     }
 }

@@ -8,7 +8,13 @@ namespace KnowledgeCheck.BLL.DTOs.Result
 {
     public class ResultResponseDto : ResultDto
     {
-        public DateTime CompletedAt { get; set; }
+        public int Id { get; set; }
+        public string UserId { get; set; }
+        public int TestId { get; set; }
+        public DateTime TakenAt { get; set; }
+        public int Score { get; set; }
+        public string UserName { get; set; }
+        public string TestName { get; set; }
     }
 
 }

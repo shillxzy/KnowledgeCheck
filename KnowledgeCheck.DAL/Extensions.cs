@@ -5,6 +5,8 @@ using KnowledgeCheck.DAL.UOW;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using KnowledgeCheck.DAL.Entities;
+using KnowledgeCheck.DAL.Helpers;
 
 namespace KnowledgeCheck.DAL
 {
@@ -20,6 +22,8 @@ namespace KnowledgeCheck.DAL
             services.AddScoped<IQuestionRepository, QuestionRepository>();
             services.AddScoped<IAnswerRepository, AnswerRepository>();
             services.AddScoped<IResultRepository, ResultRepository>();
+
+            services.AddScoped<ISortHelper<Result>, SortHelper<Result>>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

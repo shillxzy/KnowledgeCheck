@@ -7,6 +7,12 @@ using KnowledgeCheck.JWT.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 using KnowledgeCheck.DAL;
+using KnowledgeCheck.BLL.Services.Interfaces;
+using KnowledgeCheck.BLL.Services;
+using KnowledgeCheck.DAL.Data;
+using KnowledgeCheck.DAL.Entities;
+using Microsoft.AspNetCore.Identity;
+using KnowledgeCheck.DAL.Helpers;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,6 +65,12 @@ builder.Services.AddSwaggerGen(options =>
         { jwtSecurityScheme, [] }
     });
 });
+
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<KnowledgeCheckDbContext>()
+    .AddDefaultTokenProviders();
+builder.Services.AddScoped(typeof(ISortHelper<>), typeof(SortHelper<>));
+
 
 var app = builder.Build();
 
